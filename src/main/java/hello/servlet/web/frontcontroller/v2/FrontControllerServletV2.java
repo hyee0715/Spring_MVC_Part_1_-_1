@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+// /front-controller/v2/members/new-form
 @WebServlet(name = "frontControllerServletV2", urlPatterns = "/front-controller/v2/*")
 public class FrontControllerServletV2 extends HttpServlet {
 
@@ -36,6 +37,7 @@ public class FrontControllerServletV2 extends HttpServlet {
             return;
         }
 
+//        new MyView("/WEB-INF/views/new-form.jsp");가 들어감
         MyView view = controller.process(request, response);
         view.render(request, response);
     }
